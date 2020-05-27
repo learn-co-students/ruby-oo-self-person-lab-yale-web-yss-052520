@@ -26,15 +26,15 @@ attr_reader :name, :happiness, :hygiene
     end
 
     def happy?
-        @happiness > 7 
+        self.happiness > 7 
     end 
 
     def clean?
-        @hygiene > 7
+        self.hygiene > 7
     end 
 
     def get_paid(salary)
-        @bank_account += salary
+        self.bank_account += salary
         return "all about the benjamins"
     end
 
