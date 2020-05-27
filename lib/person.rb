@@ -11,6 +11,8 @@ class Person
         @hygiene = 8
     end 
 
+    # We write our own setter methods for happiness and hygiene 
+    # to ensure that the max value is 10 and the min value is 0. 
     def happiness=(amt)
         if amt > 10
             @happiness = 10
@@ -40,12 +42,12 @@ class Person
     end 
 
     def get_paid(amt)
-        self.bank_account += amt
+        self.bank_account += amt #invoking the setter method created by the attribute macro
         "all about the benjamins"
     end 
 
     def take_bath
-        self.hygiene = self.hygiene + 4
+        self.hygiene = self.hygiene + 4 #invoking the setter method we explicitly wrote
         "♪ Rub-a-dub just relaxing in the tub ♫"
     end 
 
@@ -55,12 +57,15 @@ class Person
         "♪ another one bites the dust ♫"
     end 
 
+    # Parameter person is an instance of the Person class
+    # We can therefore invoke the associated getter and setter methods. 
     def call_friend(person)
         person.happiness = person.happiness + 3
         self.happiness = self.happiness + 3
         "Hi #{person.name}! It's #{self.name}. How are you?"
     end 
 
+    # Method implements some simple logic statements using if, elsif, else. 
     def start_conversation(person, topic)
         if topic == "politics"
             person.happiness = person.happiness - 2
