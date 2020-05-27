@@ -15,7 +15,6 @@ To practice object oriented programming (OOP), you're going to create a Person c
   - start a conversation
   - state if they are happy and/or clean
 
-
 ## Instructions
 - First you need to create a person class that is initialized with a name that cannot be changed.
 - Each instance of class `Person`should be able to remember their name
